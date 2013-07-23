@@ -60,13 +60,14 @@
 }
 
 - (void) loginTask {
-    ShopModel *shopModel = [ShopModel getShopList:self.txtUserId.text withPwd:self.txtPassword.text];
-    if (shopModel.code == nil) {
-        
-        [self performSelectorOnMainThread:@selector(showError) withObject:nil waitUntilDone:NO];
-    } else {
-        [self performSelectorOnMainThread:@selector(gotoNextPage) withObject:nil waitUntilDone:NO];
-    }
+//    ShopModel *shopModel = [ShopModel getShopList:self.txtUserId.text withPwd:self.txtPassword.text];
+//    if (shopModel.code == nil) {
+//        [self performSelectorOnMainThread:@selector(showError) withObject:nil waitUntilDone:NO];
+//    } else {
+//        [self performSelectorOnMainThread:@selector(gotoNextPage) withObject:nil waitUntilDone:NO];
+//    }
+    
+    [self performSelectorOnMainThread:@selector(gotoNextPage) withObject:nil waitUntilDone:NO];
 }
 
 - (void) showError {
